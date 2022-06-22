@@ -1,19 +1,10 @@
 #!/usr/bin/env python
 from constructs import Construct
-from cdktf import App, TerraformStack, RemoteBackend, NamedRemoteWorkspace, TerraformOutput, TerraformAsset, AssetType
+from cdktf import App, TerraformStack, RemoteBackend, NamedRemoteWorkspace
 
 from cdktf_cdktf_provider_google import (
-    CloudfunctionsFunctionIamBinding,
     GoogleProvider,
-    CloudfunctionsFunction,
-    StorageBucket,
-    StorageBucketObject,
     ContainerCluster,
-    ContainerNodePool,
-    ContainerRegistry,
-    DataGoogleContainerCluster,
-    ProjectIamMember,
-    ServiceAccount
 )
 
 
@@ -28,9 +19,6 @@ class MyStack(TerraformStack):
                 name="rubrik-test-cluster",
                 initial_node_count=2,
             )
-
-
-
 
 app = App()
 project_id = "hc-8255d8aec51f4af78c98df80971"
