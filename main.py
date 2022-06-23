@@ -7,7 +7,16 @@ from cdktf_cdktf_provider_google import (
     ContainerCluster,
 )
 
+# Set the variables below to match your environment
+# terraform enterprise/cloud hostname
+tf_hostname = "app.terraform.io"
+tf_org = "dgreeninger"
+tf_workspace = "gke"
 
+#GCP project ID
+project_id = "hc-8255d8aec51f4af78c98df80971"
+
+# Example code continues. You shouldn't need to modify anything below.
 
 class MyStack(TerraformStack):
     def __init__(self, scope: Construct, ns: str):
@@ -21,12 +30,11 @@ class MyStack(TerraformStack):
             )
 
 app = App()
-project_id = "hc-8255d8aec51f4af78c98df80971"
 stack = MyStack(app, "gke")
 RemoteBackend(stack,
-  hostname='app.terraform.io',
-  organization='dgreeninger',
-  workspaces=NamedRemoteWorkspace('gke')
+  hostname=tf_hostname,
+  organization=tf_org,
+  workspaces=NamedRemoteWorkspace(tf_workspace)
 )
 
 app.synth()
