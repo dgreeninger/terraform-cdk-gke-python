@@ -8,8 +8,8 @@ Pre-reqs:
 Edit the `main.py` file to utilize your workspace and Terraform organization.
 You will need to set several variables in your provider block to connect to Terraform Cloud
 ```
-# Terraform enterprise/Cloud hostname
-tf_hostname = "app.Terraform.io"
+# Terraform Enterprise/Cloud hostname
+tf_hostname = "app.terraform.io"
 tf_org = "YOUR_USERNAME"
 # create this workspace and make sure you have GOOGLE_CREDENTIALS set up
 tf_workspace = "gke"
@@ -24,4 +24,6 @@ After the docker container comes up, run the command `make init` to initialize t
 - Type in `yes` to agree to connect to Terraform Cloud.
 - Select the link to the token creation api and open it in your web browser.
 - Copy the api key and paste it into the command prompt to link the docker container to Terraform Cloud.
-Run the `cdktf deploy` to deploy your stack to Terraform Cloud
+Run the `cdktf deploy` to deploy your stack to Terraform Cloud.
+As the deployment runs, you can check in on things in the GCP console.
+Finally, tear down your resources with `cdktf destroy`.
