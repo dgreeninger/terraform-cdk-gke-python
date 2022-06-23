@@ -10,4 +10,4 @@ docker:
 	docker build .
 	docker image list
 docker-run:
-	docker run -it --rm --mount type=bind,source="$(shell pwd)",target=/app dgreeninger/terraform-cdk-python bash
+	docker run -it --rm -w="/app" --mount type=bind,source="$(shell pwd)",target=/app dgreeninger/terraform-cdk-python bash
