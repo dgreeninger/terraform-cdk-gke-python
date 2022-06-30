@@ -26,4 +26,12 @@ After the docker container comes up, run the command `make init` to initialize t
 - Copy the api key and paste it into the command prompt to link the docker container to Terraform Cloud.
 Run the `cdktf deploy` to deploy your stack to Terraform Cloud.
 As the deployment runs, you can check in on things in the GCP console.
+
+Enable VCS Triggered Runs
+- Update the `Terraform Working Directory` in your `Settings` -> `General` tab to `cdktf.out/stacks/STACK_NAME/`
+- Connect your VCS Repo in `Settings` -> `Version Control`
+- Update your .gitignore and remove the `cdktf.out` entry.
+- `git commit add -f cdktf.out` and commit/push your output directory.
+- The Terraform Cloud Workspace should now be able to to trigger a Run.
+
 Finally, tear down your resources with `cdktf destroy`.
