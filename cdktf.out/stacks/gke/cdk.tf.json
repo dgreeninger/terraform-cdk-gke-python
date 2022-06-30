@@ -1,0 +1,51 @@
+{
+  "//": {
+    "metadata": {
+      "backend": "remote",
+      "stackName": "gke",
+      "version": "0.10.4"
+    },
+    "outputs": {
+    }
+  },
+  "provider": {
+    "google": [
+      {
+        "project": "hc-8255d8aec51f4af78c98df80971",
+        "region": "us-central1",
+        "zone": "us-central1-a"
+      }
+    ]
+  },
+  "resource": {
+    "google_container_cluster": {
+      "cluster": {
+        "//": {
+          "metadata": {
+            "path": "gke/cluster",
+            "uniqueId": "cluster"
+          }
+        },
+        "initial_node_count": 1,
+        "name": "gke-test-cluster"
+      }
+    }
+  },
+  "terraform": {
+    "backend": {
+      "remote": {
+        "hostname": "app.terraform.io",
+        "organization": "dgreeninger",
+        "workspaces": {
+          "name": "gke"
+        }
+      }
+    },
+    "required_providers": {
+      "google": {
+        "source": "google",
+        "version": "4.21.0"
+      }
+    }
+  }
+}

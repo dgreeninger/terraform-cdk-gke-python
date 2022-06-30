@@ -1,0 +1,13 @@
+{
+  "version": "0.10.4",
+  "stacks": {
+    "gke": {
+      "name": "gke",
+      "constructPath": "gke",
+      "workingDirectory": "stacks/gke",
+      "synthesizedStackPath": "stacks/gke/cdk.tf.json",
+      "annotations": [],
+      "dependencies": []
+    }
+  }
+}
