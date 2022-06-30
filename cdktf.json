@@ -6,7 +6,13 @@
   "terraformProviders": [
     "hashicorp/google@~> 4.26.0"
   ],
-  "terraformModules": [],
+  "terraformModules": [
+    {
+      "name": "vpc",
+      "source": "terraform-aws-modules/vpc/aws",
+      "version": "~> 3.0"
+    }
+  ],
   "codeMakerOutput": "imports",
   "context": {
     "excludeStackIdFromLogicalIds": "true",
