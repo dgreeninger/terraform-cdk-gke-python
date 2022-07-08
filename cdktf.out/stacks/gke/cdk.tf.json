@@ -37,7 +37,7 @@
         "hostname": "app.terraform.io",
         "organization": "dgreeninger",
         "workspaces": {
-          "name": "gke"
+          "name": "terraform-cdk-python-gke"
         }
       }
     },
