@@ -14,7 +14,7 @@ tf_org = "dgreeninger"
 tf_workspace = "gke"
 
 #GCP project ID
-project_id = "hc-8255d8aec51f4af78c98df80971"
+project_id = "hc-9ece0761f15b43008bcdb729cc9"
 
 # Example code continues. You shouldn't need to modify anything below.
 

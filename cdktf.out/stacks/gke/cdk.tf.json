@@ -3,7 +3,7 @@
     "metadata": {
       "backend": "remote",
       "stackName": "gke",
-      "version": "0.10.4"
+      "version": "0.12.0-pre.22"
     },
     "outputs": {
     }
@@ -11,7 +11,7 @@
   "provider": {
     "google": [
       {
-        "project": "hc-8255d8aec51f4af78c98df80971",
+        "project": "hc-9ece0761f15b43008bcdb729cc9",
         "region": "us-central1",
         "zone": "us-central1-a"
       }
