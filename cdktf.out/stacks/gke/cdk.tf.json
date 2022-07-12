@@ -27,7 +27,7 @@
           }
         },
         "initial_node_count": 2,
-        "name": "gke-test-cluster"
+        "name": "gke-prod-cluster"
       }
     }
   },
