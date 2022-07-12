@@ -17,11 +17,25 @@
       }
     ]
   },
+  "resource": {
+    "google_container_cluster": {
+      "cluster": {
+        "//": {
+          "metadata": {
+            "path": "gke/cluster",
+            "uniqueId": "cluster"
+          }
+        },
+        "initial_node_count": 1,
+        "name": "gke-test-cluster"
+      }
+    }
+  },
   "terraform": {
     "backend": {
       "remote": {
-        "hostname": "app.terraform.io",
-        "organization": "dgreeninger",
+        "hostname": "tfe.greeninger.org",
+        "organization": "shadybrook-excavation",
         "workspaces": {
           "name": "terraform-cdk-python-gke"
         }
