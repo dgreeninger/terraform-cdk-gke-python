@@ -1,3 +1,6 @@
+commit:
+	cdktf synth
+	git commit -a
 deploy:
 	cdktf deploy gke
 destroy:
