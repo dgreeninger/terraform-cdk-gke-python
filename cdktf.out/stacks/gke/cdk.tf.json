@@ -6,6 +6,14 @@
       "version": "0.12.0-pre.22"
     },
     "outputs": {
+      "gke": {
+        "name": "name"
+      }
+    }
+  },
+  "output": {
+    "name": {
+      "value": "${google_container_cluster.cluster.name}"
     }
   },
   "provider": {

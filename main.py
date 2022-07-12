@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 from constructs import Construct
-from cdktf import App, TerraformStack, RemoteBackend, NamedRemoteWorkspace
+from cdktf import App, TerraformStack, RemoteBackend, NamedRemoteWorkspace, TerraformOutput
 
 from cdktf_cdktf_provider_google import (
     GoogleProvider,
@@ -28,6 +28,9 @@ class MyStack(TerraformStack):
                 name="gke-prod-cluster",
                 initial_node_count=1,
             )
+        TerraformOutput(self, "name",
+                        value=cluster.name,
+                        )
 
 app = App()
 stack = MyStack(app, "gke")
