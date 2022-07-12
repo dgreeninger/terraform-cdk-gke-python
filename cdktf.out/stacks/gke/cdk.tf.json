@@ -37,7 +37,7 @@
         "hostname": "tfe.greeninger.org",
         "organization": "shadybrook-excavation",
         "workspaces": {
-          "name": "terraform-cdk-python-gke"
+          "name": "terraform-cdk-gke-python"
         }
       }
     },

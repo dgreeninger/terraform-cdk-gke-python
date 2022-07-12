@@ -11,7 +11,7 @@ from cdktf_cdktf_provider_google import (
 # terraform enterprise/cloud hostname
 tf_hostname = "tfe.greeninger.org"
 tf_org = "shadybrook-excavation"
-tf_workspace = "terraform-cdk-python-gke"
+tf_workspace = "terraform-cdk-gke-python"
 
 #GCP project ID
 project_id = "hc-9ece0761f15b43008bcdb729cc9"
