@@ -26,7 +26,7 @@
             "uniqueId": "cluster"
           }
         },
-        "initial_node_count": 2,
+        "initial_node_count": 1,
         "name": "gke-prod-cluster"
       }
     }

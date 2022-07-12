@@ -26,7 +26,7 @@ class MyStack(TerraformStack):
         GoogleProvider(self, id=project_id, region="us-central1", zone="us-central1-a", project=project_id)
         cluster = ContainerCluster(self, "cluster", \
                 name="gke-prod-cluster",
-                initial_node_count=2,
+                initial_node_count=1,
             )
 
 app = App()
