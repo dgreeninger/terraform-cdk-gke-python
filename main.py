@@ -9,8 +9,8 @@ from cdktf_cdktf_provider_google import (
 
 # Set the variables below to match your environment
 # terraform enterprise/cloud hostname
-tf_hostname = "app.terraform.io"
-tf_org = "dgreeninger"
+tf_hostname = "tfe.greeninger.org"
+tf_org = "shadybrook-excavation"
 tf_workspace = "terraform-cdk-python-gke"
 
 #GCP project ID
@@ -24,10 +24,10 @@ class MyStack(TerraformStack):
 
         # define resources here
         GoogleProvider(self, id=project_id, region="us-central1", zone="us-central1-a", project=project_id)
-        #cluster = ContainerCluster(self, "cluster", \
-        #        name="gke-test-cluster",
-        #        initial_node_count=1,
-        #    )
+        cluster = ContainerCluster(self, "cluster", \
+                name="gke-test-cluster",
+                initial_node_count=1,
+            )
 
 app = App()
 stack = MyStack(app, "gke")
