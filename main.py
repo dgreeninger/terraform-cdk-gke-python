@@ -24,10 +24,10 @@ class MyStack(TerraformStack):
 
         # define resources here
         GoogleProvider(self, id=project_id, region="us-central1", zone="us-central1-a", project=project_id)
-        cluster = ContainerCluster(self, "cluster", \
-                name="gke-test-cluster",
-                initial_node_count=1,
-            )
+        #cluster = ContainerCluster(self, "cluster", \
+        #        name="gke-test-cluster",
+        #        initial_node_count=1,
+        #    )
 
 app = App()
 stack = MyStack(app, "gke")
