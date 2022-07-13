@@ -23,14 +23,14 @@ class MyStack(TerraformStack):
         super().__init__(scope, ns)
 
         # define resources here
-        GoogleProvider(self, id=project_id, region="us-central1", zone="us-central1-a", project=project_id)
-        cluster = ContainerCluster(self, "cluster", \
-                name="gke-test-cluster",
-                initial_node_count=2,
-            )
-        TerraformOutput(self, "name",
-                        value=cluster.default_max_pods_per_node,
-                        )
+        #GoogleProvider(self, id=project_id, region="us-central1", zone="us-central1-a", project=project_id)
+        #cluster = ContainerCluster(self, "cluster", \
+        #        name="gke-test-cluster",
+        #        initial_node_count=2,
+        #    )
+        #TerraformOutput(self, "name",
+        #                value=cluster.default_max_pods_per_node,
+        #                )
 
 app = App()
 stack = MyStack(app, "gke")
