@@ -29,7 +29,7 @@ class MyStack(TerraformStack):
                 initial_node_count=2,
             )
         TerraformOutput(self, "name",
-                        value=cluster.private_cluster_config,
+                        value=cluster.default_max_pods_per_node,
                         )
 
 app = App()
